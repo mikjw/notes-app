@@ -13,7 +13,7 @@
         noteListTest.newNote("Name: Mike");
         noteListTest.newNote("Name: Rafa");
         var noteListView = new NoteListView(noteListTest);
-        var htmlString = "<ul><li><div>Name: Mike</div></li><li><div>Name: Rafa</li></div></ul>";
+        var htmlString = "<ul><li><div>Name: Mike</div></li><li><div>Name: Rafa</div></li></ul>";
         assert.isTrue(noteListView.outPutHtmlString() === htmlString);
     }
     outPutHtmlString();
