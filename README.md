@@ -1,7 +1,6 @@
 # Notes app user stories
 
-![Notes app home page mockup](images/notes-home-page-mock-up.png)
-![Notes app note page mockup](images/notes-note-page-mock-up.png)
+<img src ='https://github.com/makersacademy/course/blob/master/further_javascript/images/notes-home-page-mock-up.png'>
 
 ```
 As a programmer
