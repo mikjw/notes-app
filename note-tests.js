@@ -1,4 +1,5 @@
 (function(exports) {
+  
   var assert = {
     isTrue: function(assertion) {
       if (!assertion) {
@@ -9,8 +10,8 @@
 
   function returnTextAsInputed(){
     var note = new Note('hello');
-      assert.isTrue(note.text() === 'hello')
-  };
+      assert.isTrue(note.text() === 'hello');
+  }
 
   returnTextAsInputed();
 })(this);
