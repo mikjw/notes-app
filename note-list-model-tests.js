@@ -1,5 +1,4 @@
 (function(exports) {
-  
   var assert = {
     isTrue: function(assertion) {
       if (!assertion) {

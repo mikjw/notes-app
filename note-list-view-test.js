@@ -1,5 +1,4 @@
 (function(exports) {
-  
     var assert = {
       isTrue: function(assertion) {
         if (!assertion) {
@@ -8,14 +7,13 @@
       }
     };
   
-    function outPutHtmlString(){
+    function canOutputHtmlString(){
         var noteListTest = new NoteList();
         noteListTest.newNote("Name: Mike");
         noteListTest.newNote("Name: Rafa");
         var noteListView = new NoteListView(noteListTest);
         var htmlString = "<ul><li><div>Name: Mike</div></li><li><div>Name: Rafa</div></li></ul>";
-        assert.isTrue(noteListView.outPutHtmlString() === htmlString);
+        assert.isTrue(noteListView.outputHtmlString() === htmlString);
     }
-    outPutHtmlString();
-
+    canOutputHtmlString();
   })(this);

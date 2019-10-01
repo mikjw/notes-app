@@ -12,5 +12,4 @@
   };
 
   exports.NoteList = NoteList;
-
 })(this);
