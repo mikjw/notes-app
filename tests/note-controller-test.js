@@ -24,8 +24,9 @@
     var noteList = new NoteList();
     var noteController = new NoteController(noteList);
     noteController.displayNotes();
-    assert.isTrue(document.getElementById("app").innerHTML === "<ul><li><div>Favourite drink: sel...</div></li></ul>");
+    assert.isTrue(document.getElementById("app").innerHTML === '<ul><li><a href="#notes/1">Favourite drink: sel...</a></li></ul>');
     console.log('- passed');
+
   }
   updatesHtmlElementWithNote();
 })(this);

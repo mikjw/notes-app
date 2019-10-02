@@ -12,3 +12,10 @@
 
   exports.NoteController = NoteController;
 })(this);
+
+// var nl = new NoteList();
+// var nc = new NoteController(nl);
+
+// window.onload = function() {
+//   nc.displayNotes();
+// };
