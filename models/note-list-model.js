@@ -9,13 +9,17 @@
   };
 
   NoteList.prototype.newNote = function(text) {
-    var id = this.getId();
+    var id = this.getUniqueId();
     this._notes.push(new Note(text, id));
   };
 
-  NoteList.prototype.getId = function() {
+  NoteList.prototype.getUniqueId = function() {
     this._nextId++;
     return this._nextId;
+  };
+
+  NoteList.prototype.clearNotes = function() {
+    this._notes = [];
   };
 
   exports.NoteList = NoteList;
