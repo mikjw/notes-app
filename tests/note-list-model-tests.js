@@ -11,7 +11,7 @@
   canCreateNewNotes();
 
   console.log('returnsAllNotesInList:');
-  function returnsAllNotesInList(){
+  function returnsAllNotesInList() {
     var noteList = new NoteList();
     noteList.newNote('test note');
     noteList.newNote('test note 2');
@@ -21,4 +21,16 @@
     console.log('- passed');
   }
   returnsAllNotesInList();
+
+  console.log('givesNewNotesId');
+  function givesNewNotesId() {
+    var noteList = new NoteList();
+    noteList.newNote('test note');
+    noteList.newNote('test note 2');
+    assert.isTrue(noteList.notes()[0].text() === 'test note');
+    assert.isTrue(noteList.notes()[0].getId() === 1);
+    assert.isTrue(noteList.notes()[1].getId() === 2);
+    console.log('- passed');
+  }
+  givesNewNotesId();
 })(this);
