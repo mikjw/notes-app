@@ -7,6 +7,5 @@
       assert.isTrue(note.text() === 'hello');
       console.log('- passed');
   }
-
   returnTextAsInputed();
 })(this);

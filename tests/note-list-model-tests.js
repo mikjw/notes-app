@@ -47,6 +47,21 @@
     assert.isTrue(noteList.notes()[0].getId() === 3);
     console.log('- passed');
   }
-
   createsUniqueIds();
+
+  console.log('findsNotesById');
+  function findsNotesById() {
+    var noteList = new NoteList();
+    noteList.newNote('test note');
+    noteList.newNote('test note 2');
+    assert.isTrue(noteList.notes()[0].text() === 'test note');
+    assert.isTrue(noteList.notes()[0].getId() === 1);
+    assert.isTrue(noteList.notes()[1].getId() === 2);
+    noteList.clearNotes();
+    noteList.newNote('test note');
+    assert.isTrue(noteList.notes()[0].getId() === 3);
+    console.log('- passed');
+  }
+  findsNotesById();
+
 })(this);

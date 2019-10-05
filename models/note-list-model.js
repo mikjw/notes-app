@@ -22,5 +22,11 @@
     this._notes = [];
   };
 
+  NoteList.prototype.findById = function(id) {
+    return this._notes.find(function(el) {
+      return el.getId() === id;
+    });
+  };
+
   exports.NoteList = NoteList;
 })(this);

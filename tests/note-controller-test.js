@@ -26,7 +26,20 @@
     noteController.displayNotes();
     assert.isTrue(document.getElementById("app").innerHTML === '<ul><li><a href="#notes/1">Favourite drink: sel...</a></li></ul>');
     console.log('- passed');
-
   }
   updatesHtmlElementWithNote();
+
+  console.log('updatesPageWithNote:');
+  function updatesPageWithNote() {
+    var noteList = new NoteList();
+    var noteController = new NoteController(noteList);
+    noteList.newNote('test-note');
+    noteList.newNote('test-note-2');
+    noteController.displayNotes();
+    window.location.href = "#notes/1";
+    noteController.displayNotes();
+    assert.isTrue(document.getElementById("app").innerHTML === '<div>Favourite drink: seltzer</div>');
+    console.log('- passed');
+  }
+  updatesPageWithNote();
 })(this);
